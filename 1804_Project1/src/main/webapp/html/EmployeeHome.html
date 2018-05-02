@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee home</title>
+<link
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+</head>
+<body>
+	<h2 align="center">Employee Home</h2>
+	<h5 id="userHeader" align="center"></h5>
+	<h4 align="center">Create new ticket</h4>
+	<form class="container">
+		<div>
+			<input type="text" id="amount" placeholder="Enter amount" class="col-md-2"/>
+			<input type="text" id="reason" placeholder="Enter reason for reimbursement" class="col-md-8"/>
+			<button type="reset" id="submitButton" class="col-md-2 btn-success">Submit</button>
+		</div>	
+	</form>
+	<p id="ticketCreateText" align="center"></p>
+	
+	<h4 align="center">Your Reimbursement Tickets</h4>
+	<form class="container">
+		<button type="button" id="pendingButton" class="btn-info col-md-4">View Pending</button>
+		<button type="button" id="resolvedButton" class="btn-info col-md-4">View Resolved</button>
+		<button type="button" id="viewallButton" class="btn-info col-md-4">View All</button>
+	</form>
+	<br>
+	<div class="container">
+		<table border="1" id="ticketTable" class="table table-hover text-centered">
+			<thead>
+				<tr class="row">
+					<th align="center">Id</th>
+					<th align="center">Amount</th>
+					<th align="center">Reason</th>
+					<th align="center">Status</th>
+					<th align="center">Manager</th>
+					<th align="center">Request Date</th>
+					<th align="center">Review Date</th>
+				</tr>
+			</thead>			
+			<tbody id="tableBody"></tbody>
+		</table>
+	</div>
+	
+	<br><br>
+	<div class="container">
+		<div class="col-md-4"></div>
+		<button type="button" id="logoutButton" class="col-md-4 btn-danger">Logout</button>
+		<div class="col-md-4"></div>
+	</div>
+	<script type="text/javascript" src="../js/EmployeeHome.js"></script>
+</body>
+</html>
